@@ -1,0 +1,16 @@
+{
+  "name": "signalfoundry-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Evidence-validated work continuity API on Cloud Run",
+  "scripts": {
+    "start": "node src/server.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "engines": {"node": ">=20"},
+  "dependencies": {
+    "@google/genai": "^1.0.0",
+    "firebase-admin": "^13.0.0"
+  }
+}

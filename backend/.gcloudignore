@@ -1,0 +1,15 @@
+# Cloud Build upload exclusions are separate from Docker exclusions.
+*
+!Dockerfile
+!.dockerignore
+!package.json
+!package-lock.json
+!src/
+!src/**
+**/.env*
+**/*.key
+**/*.pem
+**/*service-account*.json
+**/*service_account*.json
+**/*credentials*.json
+**/application_default_credentials.json

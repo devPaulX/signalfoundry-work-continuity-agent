@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#071623" />
+  <meta name="description" content="SignalFoundry turns fragmented work artifacts into evidence-backed operational handoffs." />
+  <title>SignalFoundry · Work Continuity Agent</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <script defer src="/app.js"></script>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="SignalFoundry home"><span class="brandmark">S<span class="mark-dot">.</span></span><span>SignalFoundry<small>WORK CONTINUITY AGENT</small></span></a>
+      <span class="synthetic-pill"><span class="pill-dot"></span> SYNTHETIC DEMO DATA</span>
+    </header>
+    <main>
+      <div class="intro-grid">
+        <section class="intro">
+          <div class="eyebrow">FROM FRAGMENTED RECORDS TO OPERATIONAL CLARITY <span class="eyebrow-rule"></span> 01 / WORKSPACE</div>
+          <h1>Every handoff,<br><em>with evidence.</em></h1>
+          <p>Reconstruct decisions, ownership and unresolved risks across scattered work artifacts. Every important claim links back to its source.</p>
+          <div class="workspace-tag"><span class="workspace-tag-icon">↗</span><span><strong>Atlas Service Portal Pilot</strong><small>Northstar Operations · fictional organization</small></span></div>
+        </section>
+        <aside class="process-box" aria-label="Analysis workflow">
+          <div class="aside-title">THE CONTINUITY FLOW <span>01—03</span></div>
+          <div class="process-step"><b>01</b><div><strong>Gather scattered context</strong><small>Meetings, project plans, tickets, SOPs</small></div></div>
+          <div class="process-step"><b>02</b><div><strong>Reconcile with Gemini</strong><small>Cross-reference dates, gates and owners</small></div></div>
+          <div class="process-step"><b>03</b><div><strong>Verify the handoff</strong><small>Trace claims to verbatim source evidence</small></div></div>
+          <div class="aside-footer">BUILT ON GOOGLE CLOUD <span>GEMINI · FIRESTORE · CLOUD RUN</span></div>
+        </aside>
+      </div>
+      <div class="sectionbar"><div><span class="section-index">01</span><h2>Source workspace</h2></div><span id="source-count" class="section-meta">Loading artifacts…</span></div>
+      <section class="workspace-grid" aria-label="Source documents and generation">
+        <div class="artifact-panel">
+          <div class="panel-heading"><div>INPUT MATERIAL <span>VERIFIABLE RECORDS</span></div><span class="heading-accent">//</span></div>
+          <div id="source-list" class="source-list"><div class="loading">Retrieving Firestore artifacts…</div></div>
+          <div class="update-panel">
+            <div class="update-header"><span>+ ADD A NEW UPDATE</span><span class="experimental">OPTIONAL</span></div>
+            <label for="update-input">Introduce a new fact, then regenerate to produce a revised snapshot.</label>
+            <textarea id="update-input" maxlength="1200" rows="3" placeholder="Example: Security confirmed the SSO retest passed on 20 October. Priya Rao approved Gate 1."></textarea>
+            <div class="update-footer"><span id="update-limit">Up to 3 updates per session</span><button id="add-update" class="secondary-btn" type="button">Add update <span aria-hidden="true">↗</span></button></div>
+          </div>
+        </div>
+        <div class="output-panel">
+          <div class="panel-heading"><div>GENERATED HANDOFF <span>EVIDENCE-FIRST INTELLIGENCE</span></div><span class="heading-accent">//</span></div>
+          <div class="generate-zone"><div><strong>Reconstruct the work state</strong><p>Gemini analyzes all available records; unsupported citations are rejected before saving.</p></div><button id="generate" class="primary-btn" type="button">Generate work brief <span aria-hidden="true">↗</span></button></div>
+          <div id="notice" class="notice" role="status" aria-live="polite"></div>
+          <div id="result" class="result" aria-live="polite"><div class="empty-state"><div class="empty-graphic"><div class="ring ring-one"></div><div class="ring ring-two"></div><span>✳</span></div><h3>Clarity starts here.</h3><p>Review the source material and generate your first evidence-backed handoff.</p><span>STATUS: AWAITING ANALYSIS</span></div></div>
+        </div>
+      </section>
+      <footer class="page-footer"><span>© SIGNALFOUNDRY / AI BUILDER CUP 2026</span><span>DEMO USES FICTIONAL DATA · NO ENTERPRISE INTEGRATIONS</span></footer>
+    </main>
+  </div>
+</body>
+</html>

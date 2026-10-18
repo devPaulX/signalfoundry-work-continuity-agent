@@ -1,0 +1,21 @@
+name: Verify source
+on:
+  push:
+  pull_request:
+jobs:
+  local-contract-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check JavaScript syntax
+        run: |
+          for file in backend/src/*.mjs backend/test/*.mjs frontend/app.js; do node --check "$file"; done
+          bash -n scripts/deploy_cloud_shell.sh
+      - name: Run isolated API and evidence tests
+        working-directory: backend
+        run: npm test

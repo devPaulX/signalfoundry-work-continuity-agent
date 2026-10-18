@@ -1,0 +1,8 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Cloud Run's service account uses the Admin SDK, which bypasses client SDK rules.
+    // The public browser has no direct Firestore access.
+    match /{document=**} { allow read, write: if false; }
+  }
+}
